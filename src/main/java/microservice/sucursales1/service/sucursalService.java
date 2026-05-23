@@ -32,8 +32,9 @@ public class sucursalService {
         sucursalexistente.setNombreSucursal(sucursal.getNombreSucursal());
         sucursalexistente.setDireccionSucursal(sucursal.getDireccionSucursal());
         sucursalexistente.setCiudadSucursal(sucursal.getCiudadSucursal());
-        sucursalexistente.setHorarioSucursal(sucursal.getHorarioSucursal());
-        sucursalexistente.setEstadoSucursal(sucursal.isEstadoSucursal());
+        sucursalexistente.setHoraApertura(sucursal.getHoraApertura());
+        sucursalexistente.setHoraCierre(sucursal.getHoraCierre());
+        sucursalexistente.setActiva(sucursal.getActiva());
         return perfumariaRepository.save(sucursalexistente);
     }
     
