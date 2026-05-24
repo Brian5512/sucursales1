@@ -28,9 +28,12 @@ public class sucursal {
     private String ciudadSucursal;
 
     @Column(nullable=false)
-    private String horarioSucursal;
+    private String HoraApertura;
 
     @Column(nullable=false)
-    private boolean estadoSucursal;
+    private String HoraCierre;
+
+    @Column(nullable=false)
+    private boolean activa;
 
 }
