@@ -31,17 +31,17 @@ public class sucursalController {
     }
     
     @GetMapping()
-    public List<sucursal> getSucursal(@RequestParam long idSucursal){
-        return sucursalService.getSucursal();
-    }
+    public List<sucursal> getSucursales(){
+        return sucursalService.getSucursales();
+}
     
     @PutMapping("{id}")
-    public sucursal updateSucursal(@PathVariable long id, @RequestBody sucursal sucursal){
+    public sucursal updateSucursal(@PathVariable Long id, @RequestBody sucursal sucursal){
         return sucursalService.updateSucursal(id, sucursal);
     }
 
     @DeleteMapping("{id}")
-    public void deleteSucursal(@PathVariable long id){
+    public void deleteSucursal(@PathVariable Long id){
         sucursalService.deleteSucursal(id);
     }
 }

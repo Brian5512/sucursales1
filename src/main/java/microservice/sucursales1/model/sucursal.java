@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class sucursal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idSucursal;
+    private Long idSucursal;
 
     @Column(nullable=false)
     private String nombreSucursal;

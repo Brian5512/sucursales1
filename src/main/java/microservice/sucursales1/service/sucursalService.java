@@ -18,16 +18,12 @@ public class sucursalService {
         return perfumariaRepository.save(sucursal);
     }
 
-    public List<sucursal> getSucursal() {
-        return perfumariaRepository.findAll();
-    }
-
-    public void deleteSucursal(long id) {
+    public void deleteSucursal(Long id) {
         perfumariaRepository.deleteById(id);
     }   
 
 
-    public sucursal updateSucursal(long id, sucursal sucursal) {
+    public sucursal updateSucursal(Long id, sucursal sucursal) {
         sucursal sucursalexistente = perfumariaRepository.findById(id).orElseThrow();
         sucursalexistente.setNombreSucursal(sucursal.getNombreSucursal());
         sucursalexistente.setDireccionSucursal(sucursal.getDireccionSucursal());
@@ -36,6 +32,10 @@ public class sucursalService {
         sucursalexistente.setHoraCierre(sucursal.getHoraCierre());
         sucursalexistente.setActiva(sucursal.isActiva());
         return perfumariaRepository.save(sucursalexistente);
+    }
+
+    public List<sucursal> getSucursales() {
+        return perfumariaRepository.findAll();
     }
     
 }
